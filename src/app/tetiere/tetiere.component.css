@@ -1,0 +1,12 @@
+.page-header{
+    padding: 1%;
+    background-color: rgb(19, 19, 19);
+}
+
+.page-header-title{
+    color: rgb(221, 221, 221);
+}
+
+.page-header-text{
+    color: rgb(163, 163, 163);
+}
