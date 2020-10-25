@@ -12,9 +12,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [
-    ProductDetailsComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
