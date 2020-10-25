@@ -13,6 +13,7 @@ export class ApiService {
     public getProducts () : Observable<Product[]> {
         return this.http.get<Product[]>(environment.backendProduct);
     }
+    
 
     
 }

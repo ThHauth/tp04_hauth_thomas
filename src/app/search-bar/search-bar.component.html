@@ -2,7 +2,7 @@
   <div class="form-row">
     <div>
       <label>Rechercher :</label>
-      <input type="text"  [(ngModel)]="filter" (keydown)="TextSearch()" class="form-control">
+      <input type="text"  [(ngModel)]="filter" (ngModelChange)="TextSearch()" class="form-control">
     </div>
 
     <div id="disp" class="col form-group">

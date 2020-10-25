@@ -4,6 +4,10 @@ import { from } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import {ApiService} from '../services/api.service';
 import { Product } from '../models/product';
+import { Store } from "@ngxs/store";
+import { AddProduct } from '../actions/panier-actions';
+
+
 
 @Component({
   selector: 'app-products-list',
@@ -15,12 +19,11 @@ export class ProductsListComponent implements OnInit {
   products : Observable<Product[]>;
   productArray : Product[];
   allProducts:Product[];
-
   consoleFilter:string = "Tout";
   dispFilter:number = 0;
   textFilter:string = "";
 
-  constructor(private apiService : ApiService) { }
+  constructor(private apiService : ApiService,private store: Store) { }
 
   ngOnInit() {
     this.products = this.apiService.getProducts();
@@ -100,6 +103,14 @@ export class ProductsListComponent implements OnInit {
     return res;    
   }
 
-  
+  onClick(id) {
+    let productsRes:Product[];
+    productsRes = this.productArray.filter(product => product.id === id);   
+    this.addProduct(productsRes[0]);
+  }
+
+  addProduct(product:Product) {
+    this.store.dispatch(new AddProduct(product));
+  }
 
 }
