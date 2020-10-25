@@ -13,7 +13,9 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    FormulaireComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)

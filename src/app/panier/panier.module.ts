@@ -11,7 +11,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    PanierComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
