@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from'@angular/router';
 import { ProductDetailsComponent } from './product-details.component';
+import { FormsModule} from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -12,8 +13,9 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ProductDetailsComponent],
   imports: [
+    FormsModule,
     CommonModule,
     RouterModule.forChild(routes)
   ],
